@@ -2,33 +2,29 @@
 
 **Applied ML — computer vision and federated learning.**
 
-Engineer from Mines Paris – PSL (Data/AI option), currently MBA at the Collège des
-Ingénieurs. I build and evaluate ML systems where the data is distributed, scarce,
-or sensitive — and I measure them against a baseline.
+Engineer from Mines Paris – PSL (Data/AI option), currently doing an MBA at the
+Collège des Ingénieurs. I like ML problems where the data is messy, distributed
+or scarce — and I always measure against a baseline.
 
-## Selected work
+## What I've built
 
-**[Simple-VFL](https://github.com/xavierxav/Simple-VFL)** — one-shot vertical federated
-learning with frozen DINOv2 features. Each party runs its own encoder and uploads one
-1536-d vector; the coordinator never touches the pixels.
-`82.47 ± 0.70%` accuracy / `95.08 ± 0.17` AUC on VertiBench's official test set, against
-the published SplitNN baseline at `81.17 ± 0.35%` — with 3 RGB bands instead of 13.
+**[Simple-VFL](https://github.com/xavierxav/Simple-VFL)** — my CEA research internship
+made simple: in vertical federated learning, everybody runs the same frozen vision
+model locally and uploads the features once. No pixels shared, no back-and-forth.
+It beat the published baseline on the reference satellite benchmark, and the gain
+holds across seeds. Tables, ablations and caveats are in the repo.
 
-**Owkin data challenge** — cancer detection on 344 histology slides from three hospitals
-(305 patients, 1,000 tiles per slide). Benchmarked pooling and model choices under
-patient-level and leave-one-hospital-out validation: `0.702` public ROC AUC against a
-`0.631` mean-pool baseline.
+**Student data challenges** — cancer detection on histology slides (0.702 public ROC
+AUC against a 0.631 baseline, validated across hospitals), and a 1st-place finish
+detecting chimney emissions from 16,557 images with a label-efficient pipeline
+(day/night normalization, temporal windows, anomaly detection).
 
-**ArcelorMittal data challenge — 1st place** — 16,557 chimney images labelled by emission
-level. Label-efficient pipeline: day/night normalization, color distance to the mean
-plume, three-frame temporal windows, and autoencoder-based anomaly detection.
-
-**[Cantateo](https://github.com/xavierxav/cantateo)** — Django application for liturgical
-psalms with synchronized Web Audio tracks, deployed on a Linux VPS with PostgreSQL,
-Redis and Celery. Live at [cantateo.fr](https://www.cantateo.fr).
+**[Cantateo](https://github.com/xavierxav/cantateo)** — a live Django app serving daily
+liturgical psalms with synchronized audio tracks, running on my own Linux VPS.
+My playground for shipping real software: PostgreSQL, Redis, Celery.
 
 ## Toolbox
 
-`PyTorch` · `DINOv2` · `scikit-learn` · `Python` · `Docker` · `PostgreSQL` · `Linux`
+Python · PyTorch · scikit-learn · DINOv2 · Django · PostgreSQL · Docker · Linux
 
-Contact: [xav.desprez@gmail.com](mailto:xav.desprez@gmail.com) · [LinkedIn](https://www.linkedin.com/in/xavierdesprez/)
+📫 [xav.desprez@gmail.com](mailto:xav.desprez@gmail.com) · [LinkedIn](https://www.linkedin.com/in/xavierdesprez/)
